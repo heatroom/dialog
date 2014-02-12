@@ -1,0 +1,4 @@
+dialog
+======
+
+Dialog UI component
