@@ -4,7 +4,7 @@
  */
 
 var Emitter = require('emitter')
-  , overlay = require('./overlay')
+  , overlay = require('overlay')
   , $ = require('jquery')
   , bind = require('bind');
 
