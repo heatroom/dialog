@@ -1,0 +1,1 @@
+module.exports = '<div id="dialog" class="pop_up_box hide" style="top:30%; left:35%">\n  <div class="content">\n    <div class="top_bt"></div>\n    <a href="#" class="close">&times;<em>close</em></a>\n    <div class="text_d body"><p>Message</p></div>\n  </div>\n</div>';
