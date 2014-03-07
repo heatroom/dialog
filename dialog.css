@@ -8,16 +8,6 @@
   z-index: 1000;
 }
 
-#dialog .content {
-
-}
-
-#dialog h1 {
-  margin: 0 0 5px 0;
-  font-size: 16px;
-  font-weight: normal;
-}
-
 #dialog p {
   margin: 0;
   padding: 0;
@@ -88,4 +78,71 @@
 #dialog.scale.hide {
   -webkit-transform: scale(0);
   -moz-transform: scale(0);
+}
+
+.dialog-modal { 
+  position:absolute; 
+  border:1px solid #b3c2cc; 
+  overflow:hidden; 
+  background:#fff;
+  filter:progid:DXImageTransform.Microsoft.Shadow(color=#999,direction=120,strength=4);
+  /*ie*/
+  -moz-box-shadow: 0 0 15px #999;
+  -webkit-box-shadow: 0 0 15px #999;
+  box-shadow:0 0 15px #999;
+}
+
+.dialog-header{ 
+  position:relative; 
+  font-size:14px; 
+  height:40px; 
+  background:#0d80d6; 
+  line-height:40px; 
+  padding-left: 10px; 
+  font-weight:bold; 
+  color:#fff; 
+  border-bottom:1px solid #005ca1;
+}
+
+.dialog-body{ 
+  position: relative;
+  background:#fff;
+  padding: 20px;
+  margin:10px; 
+  min-height:80px; 
+  overflow-x:hidden; 
+  color:#666; 
+  line-height:1.8;
+}
+
+.dialog-footer {
+  margin-top: 15px;
+  padding: 19px 20px 30px;
+  text-align: right;
+  border-top: 1px solid #E5E5E5;
+}
+
+.button{display:inline-block;height:32px;line-height:32px;;padding:0 15px;background:#ec5524;color:#fff!important;border-radius:2px;cursor:pointer;}
+.button:hover, .button-hover{text-decoration:none;background:#ff7744;}
+.button-inline{
+  height:24px;
+  line-height:24px;
+  *overflow:hidden;
+  border-radius:0;
+  border:1px solid #dadada!important;
+  color:#888!important;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#F0EFEB));
+  background: -moz-linear-gradient(top, #ffffff, #F0EFEB);
+  background: -o-linear-gradient(top, #ffffff, #F0EFEB);
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#F0EFEB')
+  chroma(color=black);
+}
+.button-inline:hover, .button-inline-hover{
+  color:#999;
+  border:1px solid #c1c1c1;
+  background: -webkit-gradient(linear, left top, left bottom, from(#F0EFEB), to(#ffffff));
+  background: -moz-linear-gradient(top, #F0EFEB, #ffffff);
+  background: -o-linear-gradient(top, #F0EFEB, #ffffff);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F0EFEB', endColorstr='#ffffff')
+  chroma(color=black);
 }

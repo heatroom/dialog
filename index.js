@@ -179,10 +179,9 @@ Dialog.prototype.modal = function(){
  * @api public
  */
 
-Dialog.prototype.overlay = function(opts){
+Dialog.prototype.overlay = function(){
   var self = this;
-  opts = opts || { closable: true };
-  var o = overlay(opts);
+  var o = overlay();
   o.on('hide', function(){
     self._overlay = null;
     self.hide();
