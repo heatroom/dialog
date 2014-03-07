@@ -101,6 +101,20 @@ Dialog.prototype.render = function(options){
     return false;
   });
 
+  el.find('.cancel').click(function(e){
+    e.preventDefault();
+    self.emit('cancel');
+    self.callback(false);
+    self.hide();
+  });
+
+  el.find('.ok').click(function(e){
+    e.preventDefault();
+    self.emit('ok');
+    self.callback(true);
+    self.hide();
+  });
+
   if (titleEl) {
     if (!title) {
       titleEl.parentNode.removeChild(titleEl);
@@ -217,7 +231,8 @@ Dialog.prototype.escapable = function(){
  * @api public
  */
 
-Dialog.prototype.show = function(){
+Dialog.prototype.show = function(fn){
+  this.callback = fn || function() {};
   var overlay = this._overlay;
 
   // overlay
