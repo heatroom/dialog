@@ -144,7 +144,8 @@ Dialog.prototype.render = function(options){
  */
 
 Dialog.prototype.closable = function(){
-  return this.el.addClass('closable');
+  this.el.addClass('closable');
+  return this;
 };
 
 /**
@@ -317,7 +318,9 @@ Dialog.prototype.hide = function(ms){
  */
 
 Dialog.prototype.remove = function(){
-  this.emit('hide');
-  this.el.remove();
+  if(this.el.parentNode) {
+    this.emit('hide');
+    this.el.parentNode.removeChild(this.el);
+  }
   return this;
 };
